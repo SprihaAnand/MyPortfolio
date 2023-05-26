@@ -40,3 +40,6 @@ Visit my site to get to know me better and explore the depth of my work. I look 
 ![Logo](https://github.com/SprihaAnand/MyPortfolio/assets/97617046/72c9718f-8a14-4e39-bd64-9d8b2bbbbaec)
 
 
+## Feedback
+
+If you have any feedback, please reach out to me at sprihaanand@gmail.com

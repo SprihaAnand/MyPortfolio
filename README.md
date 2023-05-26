@@ -1,4 +1,4 @@
-# Project Title
+# My Portfolio 
 
 Welcome to my portfolio site! Here you will find a comprehensive collection of my projects, experiences, resume, an insightful glimpse into who I am, and various ways to get in touch with me.
 

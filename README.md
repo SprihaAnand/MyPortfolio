@@ -16,6 +16,23 @@ Lastly, I invite you to explore the blog section, where I share my thoughts, ins
 
 Visit my site to get to know me better and explore the depth of my work. I look forward to connecting with you and sharing my passion for creativity, innovation, and continuous learning.
 
+## Screenshots
+
+![App Screenshot](https://github.com/SprihaAnand/MyPortfolio/assets/97617046/df34353d-37a4-4591-a98a-12f83af2ddab)
+![App Screenshot](https://github.com/SprihaAnand/MyPortfolio/assets/97617046/da2538cc-b917-42e1-a088-32e33dcddddf)
+
+![App Screenshot](https://github.com/SprihaAnand/MyPortfolio/assets/97617046/fc21d7fc-6ba7-4192-a4bf-177bf39f7872)
+
+
+![App Screenshot](https://github.com/SprihaAnand/MyPortfolio/assets/97617046/b07b9ead-4ddb-494f-90fe-efd4f6734673)
+
+
+![App Screenshot](https://github.com/SprihaAnand/MyPortfolio/assets/97617046/4f15eb35-a0d0-4e24-bbec-551b4a65f3e3)
+
+
+
 ## Demo
 
 [![Watch the video](https://github.com/SprihaAnand/MyPortfolio/assets/97617046/4f86aa8d-0612-4780-ab70-a55d4fb9e0f2)](https://github.com/SprihaAnand/MyPortfolio/assets/97617046/0b1a2bbe-77e6-4ce5-8542-dcd21aef1c64)
+
+

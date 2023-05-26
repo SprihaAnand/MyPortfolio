@@ -43,3 +43,6 @@ Visit my site to get to know me better and explore the depth of my work. I look 
 ## Feedback
 
 If you have any feedback, please reach out to me at sprihaanand@gmail.com
+
+# ThankYou!!
+Thank you for visiting my portfolio site! I appreciate your interest and hope you take the time to explore it further. I look forward to connecting with you and discussing potential opportunities.

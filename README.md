@@ -15,3 +15,7 @@ For those interested in collaborating, discussing potential opportunities, or si
 Lastly, I invite you to explore the blog section, where I share my thoughts, insights, and articles on a wide range of topics. It's a great way to dive deeper into my expertise and get a feel for my writing style.
 
 Visit my site to get to know me better and explore the depth of my work. I look forward to connecting with you and sharing my passion for creativity, innovation, and continuous learning.
+
+## Demo
+
+[![Watch the video](https://github.com/SprihaAnand/MyPortfolio/assets/97617046/4f86aa8d-0612-4780-ab70-a55d4fb9e0f2)](https://github.com/SprihaAnand/MyPortfolio/assets/97617046/0b1a2bbe-77e6-4ce5-8542-dcd21aef1c64)

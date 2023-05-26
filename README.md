@@ -36,3 +36,7 @@ Visit my site to get to know me better and explore the depth of my work. I look 
 [![Watch the video](https://github.com/SprihaAnand/MyPortfolio/assets/97617046/4f86aa8d-0612-4780-ab70-a55d4fb9e0f2)](https://github.com/SprihaAnand/MyPortfolio/assets/97617046/0b1a2bbe-77e6-4ce5-8542-dcd21aef1c64)
 
 
+# Logo
+![Logo](https://github.com/SprihaAnand/MyPortfolio/assets/97617046/72c9718f-8a14-4e39-bd64-9d8b2bbbbaec)
+
+

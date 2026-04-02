@@ -8,6 +8,35 @@
   "use strict";
 
   /**
+   * Theme toggle
+   */
+  const rootBody = document.body;
+  const rootHtml = document.documentElement;
+  let savedTheme = null;
+  try {
+    savedTheme = localStorage.getItem('theme');
+  } catch (e) {
+    savedTheme = null;
+  }
+
+  const applyTheme = (theme) => {
+    const isDark = theme === 'dark';
+    if (isDark) {
+      rootBody.setAttribute('data-theme', 'dark');
+      rootHtml.classList.add('theme-dark');
+    } else {
+      rootBody.removeAttribute('data-theme');
+      rootHtml.classList.remove('theme-dark');
+    }
+
+    document.querySelectorAll('.theme-toggle').forEach((toggle) => {
+      toggle.setAttribute('aria-pressed', String(isDark));
+    });
+  };
+
+  applyTheme(savedTheme === 'dark' ? 'dark' : 'light');
+
+  /**
    * Easy selector helper function
    */
   const select = (el, all = false) => {
@@ -32,6 +61,16 @@
       }
     }
   }
+
+  on('click', '.theme-toggle', function() {
+    const nextTheme = rootBody.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    applyTheme(nextTheme);
+    try {
+      localStorage.setItem('theme', nextTheme);
+    } catch (e) {
+      // Ignore storage failures and still apply the theme for this session.
+    }
+  }, true)
 
   /**
    * Easy on scroll event listener 

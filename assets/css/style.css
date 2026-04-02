@@ -2,6 +2,30 @@
 # Japanese Editorial Theme
 --------------------------------------------------------------*/
 
+@font-face {
+    font-family: "SprihaMincho";
+    src: url("../fonts/GoudyOldStyle-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "SprihaMincho";
+    src: url("../fonts/GoudyOldStyle-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "SprihaGothic";
+    src: url("../fonts/MSGothic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
     --paper: #f7f0e4;
     --paper-deep: #eadcc8;
@@ -30,9 +54,10 @@ html {
 }
 
 body {
-    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-family: "SprihaGothic", "Yu Gothic", "Meiryo", sans-serif;
     color: var(--ink);
     background:
+        url("../img/washi-texture.svg"),
         radial-gradient(circle at 22% 18%, rgba(255, 255, 255, 0.34), transparent 22%),
         radial-gradient(circle at 78% 22%, rgba(181, 69, 46, 0.1), transparent 20%),
         radial-gradient(circle at 18% 78%, rgba(184, 144, 71, 0.12), transparent 18%),
@@ -40,6 +65,9 @@ body {
         radial-gradient(circle at 12% 10%, rgba(181, 69, 46, 0.14), transparent 24%),
         radial-gradient(circle at 88% 14%, rgba(51, 69, 92, 0.12), transparent 24%),
         linear-gradient(180deg, #fbf6ef 0%, var(--paper) 54%, #f0e4d4 100%);
+    background-size: 640px 640px, auto, auto, auto, auto, auto, auto;
+    background-repeat: repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+    background-attachment: fixed, fixed, fixed, fixed, fixed, fixed, fixed;
     min-height: 100vh;
     position: relative;
 }
@@ -89,7 +117,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "BIZ UDPMincho", serif;
+    font-family: "SprihaMincho", "Yu Mincho", "Times New Roman", serif;
     color: var(--ink);
     letter-spacing: -0.03em;
 }
@@ -724,7 +752,7 @@ section {
     background: rgba(102, 120, 95, 0.12);
     color: var(--moss);
     font-size: 0.8rem;
-    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-family: "SprihaGothic", "Yu Gothic", "Meiryo", sans-serif;
     font-weight: 700;
 }
 

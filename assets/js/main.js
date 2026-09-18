@@ -113,9 +113,12 @@
    * Mobile nav toggle
    */
   on('click', '.mobile-nav-toggle', function(e) {
-    select('#navbar').classList.toggle('navbar-mobile')
-    this.classList.toggle('bi-list')
-    this.classList.toggle('bi-x')
+    const navbar = select('#navbar');
+    const isOpen = navbar.classList.toggle('navbar-mobile');
+    const icon = this.querySelector('i') || this;
+    icon.classList.toggle('bi-list');
+    icon.classList.toggle('bi-x');
+    this.setAttribute('aria-expanded', String(isOpen));
   })
 
   /**
@@ -139,8 +142,10 @@
       if (navbar.classList.contains('navbar-mobile')) {
         navbar.classList.remove('navbar-mobile')
         let navbarToggle = select('.mobile-nav-toggle')
-        navbarToggle.classList.toggle('bi-list')
-        navbarToggle.classList.toggle('bi-x')
+        let navbarToggleIcon = navbarToggle.querySelector('i') || navbarToggle
+        navbarToggleIcon.classList.toggle('bi-list')
+        navbarToggleIcon.classList.toggle('bi-x')
+        navbarToggle.setAttribute('aria-expanded', 'false')
       }
       scrollto(this.hash)
     }
@@ -270,11 +275,19 @@
    */
   window.addEventListener('load', () => {
     AOS.init({
-      duration: 1000,
+      duration: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 760,
       easing: "ease-in-out",
       once: true,
       mirror: false
     });
   });
+
+  /**
+   * Keep the small footer stamp accurate without making the page depend on it.
+   */
+  const year = select('#year');
+  if (year) {
+    year.textContent = new Date().getFullYear();
+  }
 
 })()

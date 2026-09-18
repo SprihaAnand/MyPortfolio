@@ -4,8 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-    <title>Spriha Anand</title>
+    <title>Spriha Anand — Software Engineer</title>
     <meta content="Portfolio of Spriha Anand, Associate Software Developer at Oracle and full-stack developer." name="description">
     <meta content="Spriha Anand, Oracle, portfolio, MERN, Generative AI" name="keywords">
 
@@ -20,12 +19,15 @@
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="home-page">
     <header id="header" class="fixed-top">
-        <div class="container-fluid d-flex justify-content-between align-items-center">
-            <h1 class="logo me-auto me-lg-0"><a href="index.html">Spriha</a></h1>
+        <div class="nav-shell">
+            <a class="brand" href="index.html" aria-label="Spriha Anand home">
+                <span>SPRIHA</span>
+                <small>ANAND / 01</small>
+            </a>
 
-            <nav id="navbar" class="navbar order-last order-lg-0">
+            <nav id="navbar" class="navbar" aria-label="Primary navigation">
                 <ul>
                     <li><a class="active" href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
@@ -33,179 +35,168 @@
                     <li><a href="services.html">Projects</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
-                <i class="bi bi-list mobile-nav-toggle"></i>
+                <button class="mobile-nav-toggle" type="button" aria-label="Toggle navigation"><i class="bi bi-list"></i></button>
             </nav>
 
             <div class="header-social-links">
                 <button class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
-                    <span class="theme-toggle-track">
-                        <span class="theme-toggle-sun"><i class="bi bi-brightness-high-fill"></i></span>
-                        <span class="theme-toggle-thumb"><i class="bi bi-moon-stars-fill"></i></span>
-                    </span>
+                    <span class="theme-toggle-track"><i class="bi bi-brightness-high-fill"></i><i class="bi bi-moon-stars-fill"></i></span>
                 </button>
-                <a href="mailto:sprihaanand@gmail.com" class="email"><i class="bi bi-envelope"></i></a>
-                <a href="https://github.com/SprihaAnand" class="github"><i class="bi bi-github"></i></a>
-                <a href="https://www.linkedin.com/in/spriha-anand-818672227/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                <a href="mailto:sprihaanand@gmail.com" class="email" aria-label="Email Spriha"><i class="bi bi-envelope"></i></a>
+                <a href="https://github.com/SprihaAnand" class="github" aria-label="Spriha on GitHub"><i class="bi bi-github"></i></a>
+                <a href="https://www.linkedin.com/in/spriha-anand-818672227/" class="linkedin" aria-label="Spriha on LinkedIn"><i class="bi bi-linkedin"></i></a>
             </div>
         </div>
     </header>
 
-    <section id="hero" class="d-flex align-items-center">
-        <div class="container" data-aos="zoom-in" data-aos-delay="100">
-            <div class="hero-board">
-                <div class="hero-main panel">
-                    <div class="hero-kicker">
-                        <span></span>
-                        <span>Digital Craft and Quiet Precision</span>
-                    </div>
-                    <h1>Spriha Anand</h1>
-                    <h2>Software engineer focused on full-stack development and AI-powered products, currently building and supporting production software at Oracle.</h2>
-                    <div class="hero-actions">
-                        <a href="resume.html" class="btn-about">View Resume</a>
-                        <a href="services.html" class="btn-outline-jp">Selected Work</a>
-                        <a href="https://github.com/SprihaAnand" class="btn-outline-jp">GitHub</a>
-                        <a href="https://www.linkedin.com/in/spriha-anand-818672227/" class="btn-outline-jp">LinkedIn</a>
-                        <a href="mailto:sprihaanand@gmail.com" class="btn-outline-jp">Email Me</a>
-                    </div>
-                    <div class="hero-grid">
-                        <div class="hero-chip">
-                            <strong>Oracle</strong>
-                            <span>Software development, debugging, and product support</span>
-                        </div>
-                        <div class="hero-chip">
-                            <strong>Full Stack + AI</strong>
-                            <span>React, Node, Python, Streamlit, LangChain, GenAI</span>
-                        </div>
-                        <div class="hero-chip">
-                            <strong>NIT Hamirpur</strong>
-                            <span>B.Tech CSE, 2025</span>
-                        </div>
-                    </div>
+    <section id="hero" class="hero-kinetic">
+        <div class="hero-noise" aria-hidden="true"></div>
+        <div class="container hero-grid">
+            <div class="hero-copy" data-aos="fade-up" data-aos-delay="100">
+                <p class="eyebrow"><span></span> Software engineer / India</p>
+                <h1>Building<br><em>bright</em><br>software.</h1>
+                <p class="hero-intro">I’m Spriha—an Oracle software developer who pairs full-stack engineering with product curiosity and a growing obsession with useful AI.</p>
+                <div class="hero-actions">
+                    <a href="services.html" class="button button-lime">Explore projects <i class="bi bi-arrow-up-right"></i></a>
+                    <a href="resume.html" class="button button-outline">View résumé <i class="bi bi-file-earmark-text"></i></a>
                 </div>
-
-                <div class="hero-side">
-                    <div class="mini-panel vermilion">
-                        <h3>Open to Software Roles</h3>
-                        <p>Product-minded engineer with industry experience, strong CS fundamentals, and a bias toward ownership.</p>
-                        <small>Backend / Full Stack / AI Applications</small>
-                    </div>
-                    <div class="mini-panel indigo">
-                        <h3>What I Bring</h3>
-                        <p>Production debugging, feature delivery, full-stack execution, and AI product building across modern web stacks.</p>
-                    </div>
-                    <div class="mini-panel">
-                        <h3>Location and Availability</h3>
-                        <p>Based in India and open to software engineering opportunities across product teams, platform teams, and AI-driven applications.</p>
-                    </div>
+                <div class="hero-metrics" aria-label="Career highlights">
+                    <div><strong>01</strong><span>Current role<br>at Oracle</span></div>
+                    <div><strong>9.51</strong><span>CGPA / 10<br>NIT Hamirpur</span></div>
+                    <div><strong>∞</strong><span>Ideas in<br>progress</span></div>
                 </div>
             </div>
+
+            <div class="hero-art" aria-label="Portrait of Spriha Anand" data-aos="zoom-in" data-aos-delay="180">
+                <div class="orb orb-a"></div>
+                <div class="orb orb-b"></div>
+                <div class="squiggle squiggle-a">
+                    <svg viewBox="0 0 260 240" role="presentation" aria-hidden="true">
+                        <path d="M20 201C67 162 38 102 90 74c53-29 79 26 117-3 30-23 15-62-5-67" />
+                        <path d="M51 224c40-36 8-91 58-120 55-32 105 16 132-35" />
+                    </svg>
+                </div>
+                <div class="portrait-card">
+                    <div class="portrait-caption"><span>HELLO, HI, NAMASTE</span><i class="bi bi-stars"></i></div>
+                    <img src="assets/img/about.jpeg" alt="Spriha Anand smiling">
+                    <div class="portrait-footer"><span>ENGINEER</span><span>MAKER</span><span>LEARNER</span></div>
+                </div>
+                <div class="sticker sticker-ship">SHIP<br>THE<br>THING <i class="bi bi-arrow-down-right"></i></div>
+                <div class="sticker sticker-code">FULL<br>STACK<br>+ AI</div>
+                <div class="orbit-label">WORK IN<br>WONDER <span>✦</span></div>
+            </div>
+        </div>
+        <div class="hero-swell" aria-hidden="true">
+            <svg viewBox="0 0 1440 100" preserveAspectRatio="none"><path d="M0 50 C90 10 170 90 260 50 S430 10 520 50 S690 90 780 50 S950 10 1040 50 S1210 90 1300 50 S1390 10 1440 36 V100 H0Z"></path></svg>
         </div>
     </section>
 
-    <main id="main">
-        <section class="home-focus">
-            <div class="container section-wrap panel" data-aos="fade-up">
-                <div class="section-title">
-                    <span class="jp-label">Overview</span>
-                    <h2>Professional Overview</h2>
-                    <p>Everything a recruiter or hiring manager should know in one place: current role, strongest stack, and the work I can contribute from day one.</p>
-                </div>
+    <div class="signal-tape" aria-hidden="true">
+        <div class="signal-track"><span>MAKE IT CLEAR</span><i>✦</i><span>MAKE IT USEFUL</span><i>✦</i><span>MAKE IT MEMORABLE</span><i>✦</i><span>MAKE IT CLEAR</span><i>✦</i><span>MAKE IT USEFUL</span><i>✦</i><span>MAKE IT MEMORABLE</span><i>✦</i></div>
+    </div>
 
-                <div class="impact-grid">
-                    <div class="impact-card panel-soft">
-                        <h3>Production Experience</h3>
-                        <p>Currently working at Oracle as an Associate Software Developer on OCPIC, contributing to code development, debugging, bug fixes, performance improvements, and customer support.</p>
-                    </div>
-                    <div class="impact-card panel-soft">
-                        <h3>Strong Fundamentals</h3>
-                        <p>B.Tech in Computer Science and Engineering from NIT Hamirpur with a 9.51/10 CGPA, backed by strong DSA, OOP, and DBMS foundations.</p>
-                    </div>
-                    <div class="impact-card panel-soft">
-                        <h3>Full-Stack + AI Delivery</h3>
-                        <p>Hands-on across React, Node.js, Express, Spring Boot, Python, Streamlit, RAG workflows, LangChain, LangGraph, and product-focused AI experiences.</p>
-                    </div>
+    <main id="main">
+        <section class="home-intro">
+            <div class="container intro-layout" data-aos="fade-up">
+                <div class="section-stamp">01<br><span>THE<br>SHORT<br>VERSION</span></div>
+                <div>
+                    <p class="section-kicker">A little about my work</p>
+                    <h2>I turn <span>complex</span> ideas into useful experiences.</h2>
+                    <p class="large-copy">From debugging real production systems to making AI tools people can actually use, I enjoy the detail work: asking sharper questions, finding the cleanest path, and getting the experience right.</p>
+                    <a href="about.html" class="text-link">More of the story <i class="bi bi-arrow-right"></i></a>
+                </div>
+                <div class="intro-doodle" aria-hidden="true">
+                    <div class="doodle-dot"></div><div class="doodle-ring"></div>
+                    <svg viewBox="0 0 180 180"><path d="M33 139c26-56 101-72 116-17 10 37-39 58-70 31-27-23-3-57 29-49" /></svg>
                 </div>
             </div>
         </section>
 
         <section class="home-experience">
-            <div class="container section-wrap panel" data-aos="fade-up">
-                <div class="section-title">
-                    <span class="jp-label">Experience Preview</span>
-                    <h2>Work Experience</h2>
-                    <p>Industry experience across product engineering, frontend systems, and internship-to-full-time growth.</p>
+            <div class="container">
+                <div class="section-heading split-heading" data-aos="fade-up">
+                    <div><span class="section-kicker">02 / EXPERIENCE</span><h2>Real-world systems.<br>Restless <span>curiosity.</span></h2></div>
+                    <p>What I bring to a team: a solid CS foundation, production empathy, and a practical habit of shipping the next useful thing.</p>
                 </div>
-
                 <div class="experience-preview">
-                    <div class="experience-card panel-soft">
-                        <div class="experience-head">
-                            <h3>Oracle</h3>
-                            <span>Jan 2025 - Present</span>
-                        </div>
-                        <strong>Associate Software Developer [OCPIC]</strong>
-                        <p>Working on production software with a focus on feature delivery, debugging, bug fixes, performance improvements, and customer-facing issue support.</p>
-                    </div>
-                    <div class="experience-card panel-soft">
-                        <div class="experience-head">
-                            <h3>Web Tech Masters</h3>
-                            <span>May 2024 - Jul 2024</span>
-                        </div>
-                        <strong>MERN Development &amp; UI/UX Intern</strong>
-                        <p>Built frontend for the eAttendance-AMS project and led UI/UX and frontend execution across the team.</p>
-                    </div>
-                    <div class="experience-card panel-soft">
-                        <div class="experience-head">
-                            <h3>Datence Technologies</h3>
-                            <span>Aug 2023 - Sep 2023</span>
-                        </div>
-                        <strong>Frontend Development Intern</strong>
-                        <p>Improved responsive frontend experience and collaborated with cross-functional teams to strengthen usability and delivery quality.</p>
-                    </div>
+                    <article class="experience-card experience-card--blue" data-aos="fade-up" data-aos-delay="50">
+                        <span class="card-number">01</span><i class="bi bi-lightning-charge-fill card-icon"></i>
+                        <h3>Oracle</h3><strong>Associate Software Developer / OCPIC</strong>
+                        <p>Feature delivery, debugging, performance improvements, and customer issue support for production software.</p>
+                        <span class="card-date">2025 — NOW</span>
+                    </article>
+                    <article class="experience-card experience-card--coral" data-aos="fade-up" data-aos-delay="120">
+                        <span class="card-number">02</span><i class="bi bi-bezier2 card-icon"></i>
+                        <h3>Full-stack craft</h3><strong>From interface to infrastructure</strong>
+                        <p>Hands-on with React, Node.js, Express, Spring Boot, SQL, MongoDB, and the small details that make products feel considered.</p>
+                        <span class="card-date">BUILD / TEST / ITERATE</span>
+                    </article>
+                    <article class="experience-card experience-card--lime" data-aos="fade-up" data-aos-delay="190">
+                        <span class="card-number">03</span><i class="bi bi-magic card-icon"></i>
+                        <h3>AI, with intent</h3><strong>Useful over flashy</strong>
+                        <p>Exploring Python, Streamlit, RAG, LangChain, LangGraph, and generative AI through product-shaped experiments.</p>
+                        <span class="card-date">LEARN / APPLY / SHARE</span>
+                    </article>
                 </div>
             </div>
+        </section>
+
+        <section class="home-projects">
+            <div class="project-swell project-swell-top" aria-hidden="true"><svg viewBox="0 0 1440 100" preserveAspectRatio="none"><path d="M0 42C95 90 167 2 265 42s169 48 267 0 175-15 263 5 172 47 261-7 171 26 255 5 116-21 129-17V0H0Z"></path></svg></div>
+            <div class="container">
+                <div class="section-heading project-heading" data-aos="fade-up">
+                    <div><span class="section-kicker">03 / SELECTED WORK</span><h2>Things I’ve<br>made <span>move.</span></h2></div>
+                    <a href="services.html" class="button button-dark">All projects <i class="bi bi-arrow-up-right"></i></a>
+                </div>
+                <div class="feature-projects">
+                    <a class="feature-card feature-card--daycraft" href="services.html" data-aos="fade-up" data-aos-delay="60">
+                        <div class="feature-visual visual-calendar"><span>MON</span><span>TUE</span><span>WED</span><span>THU</span><b>FOCUS</b></div>
+                        <span class="project-eyebrow">AI PRODUCT / 01</span><h3>DayCraftAI</h3>
+                        <p>An AI productivity assistant that helps turn the moving pieces of a day into a plan with purpose.</p><span class="feature-arrow"><i class="bi bi-arrow-up-right"></i></span>
+                    </a>
+                    <a class="feature-card feature-card--learn" href="services.html" data-aos="fade-up" data-aos-delay="130">
+                        <div class="feature-visual visual-quiz"><span>LEVEL UP</span><b>?</b><i>✓</i><i>→</i></div>
+                        <span class="project-eyebrow">ADAPTIVE LEARNING / 02</span><h3>LearnWithAI</h3>
+                        <p>A learning platform that adapts questions and study material to meet learners where they are.</p><span class="feature-arrow"><i class="bi bi-arrow-up-right"></i></span>
+                    </a>
+                    <a class="feature-card feature-card--pulse" href="services.html" data-aos="fade-up" data-aos-delay="200">
+                        <div class="feature-visual visual-pulse"><span></span><span></span><span></span><span></span><b>PULSE</b></div>
+                        <span class="project-eyebrow">FRONTEND / 03</span><h3>Pulse</h3>
+                        <p>A polished frontend study in contemporary structure, rhythm, and responsive interaction.</p><span class="feature-arrow"><i class="bi bi-arrow-up-right"></i></span>
+                    </a>
+                </div>
+            </div>
+            <div class="project-swell project-swell-bottom" aria-hidden="true"><svg viewBox="0 0 1440 100" preserveAspectRatio="none"><path d="M0 18c115-26 179 82 293 43S458 0 572 33s203 46 310 2 169 28 286 19 174-30 272 4V100H0Z"></path></svg></div>
         </section>
 
         <section class="home-stack">
-            <div class="container section-wrap panel" data-aos="fade-up">
-                <div class="section-title">
-                    <span class="jp-label">Core Stack</span>
-                    <h2>Technologies I Work With</h2>
-                    <p>A focused set of tools I can contribute with immediately in software engineering roles.</p>
-                </div>
-
-                <div class="stack-grid">
-                    <div class="stack-card panel-soft">
-                        <h3>Frontend</h3>
-                        <p>React, JavaScript, HTML5, CSS3, Tailwind CSS, Bootstrap, Figma</p>
-                    </div>
-                    <div class="stack-card panel-soft">
-                        <h3>Backend</h3>
-                        <p>Node.js, Express.js, Spring Boot, SQL, MongoDB</p>
-                    </div>
-                    <div class="stack-card panel-soft">
-                        <h3>AI and Product</h3>
-                        <p>Python, Streamlit, LangChain, LangGraph, RAG, Gemini API, OpenAI</p>
-                    </div>
-                    <div class="stack-card panel-soft">
-                        <h3>Engineering Basics</h3>
-                        <p>DSA, OOP, DBMS, debugging, testing, performance fixes, customer issue support</p>
-                    </div>
+            <div class="container stack-layout" data-aos="fade-up">
+                <div class="stack-copy"><span class="section-kicker">04 / TOOLKIT</span><h2>A playful mind.<br>A pragmatic <span>stack.</span></h2><p>Tools are just tools. I choose the ones that help teams learn quickly, build responsibly, and keep improving.</p></div>
+                <div class="stack-cloud" aria-label="Technical skills">
+                    <span>React</span><span>Java</span><span>Python</span><span>Node.js</span><span>SQL</span><span>Spring Boot</span><span>RAG</span><span>LangChain</span><span>MongoDB</span><span>Figma</span><span>Streamlit</span><span>GitHub</span>
                 </div>
             </div>
         </section>
 
+        <section class="contact-cta">
+            <div class="container" data-aos="zoom-in">
+                <div class="contact-cta-card">
+                    <div class="cta-scribble" aria-hidden="true"><svg viewBox="0 0 160 160"><path d="M19 95c20-56 97-66 118-17 17 40-23 74-69 48-41-22-27-73 16-68" /></svg></div>
+                    <span class="section-kicker">05 / LET’S MAKE SOMETHING</span>
+                    <h2>Have a problem worth <span>solving?</span></h2>
+                    <p>I’m open to thoughtful software roles, product conversations, and collaborations that leave a mark.</p>
+                    <a href="contact.html" class="button button-lime">Start a conversation <i class="bi bi-arrow-up-right"></i></a>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer id="footer">
-        <div class="container">
-            <div class="copyright">
-                &copy; Copyright <strong><span>Spriha</span></strong>. All Rights Reserved
-            </div>
-        </div>
+        <div class="container footer-shell"><a class="brand" href="index.html"><span>SPRIHA</span><small>ANAND / 01</small></a><p>Designed and built with curiosity.<br>© <span id="year">2026</span> Spriha Anand.</p><div><a href="mailto:sprihaanand@gmail.com">Email</a><a href="https://github.com/SprihaAnand">GitHub</a><a href="https://www.linkedin.com/in/spriha-anand-818672227/">LinkedIn</a></div></div>
     </footer>
 
-    <div id="preloader"></div>
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <div id="preloader" aria-hidden="true"><span>LOADING / GOOD THINGS</span></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center" aria-label="Back to top"><i class="bi bi-arrow-up"></i></a>
 
     <script src="assets/vendor/purecounter/purecounter.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>

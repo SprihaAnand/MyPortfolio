@@ -1,48 +1,80 @@
-# My Portfolio 
+# Spriha Anand — Portfolio
 
-Welcome to my portfolio site! Here you will find a comprehensive collection of my projects, experiences, resume, an insightful glimpse into who I am, and various ways to get in touch with me.
+A bold, playful personal portfolio for **Spriha Anand**, an Associate Software Developer at Oracle and a full-stack engineer interested in thoughtful product experiences and practical AI.
 
-As you navigate through my site, you'll discover a rich portfolio showcasing my diverse range of projects. From web development and mobile applications to design and multimedia ventures, each project reflects my dedication to innovation, creativity, and problem-solving. I believe in constantly pushing boundaries and delivering exceptional results.
+The current visual system is an original “electric playground”: poster-scale typography, cobalt blue, lime, coral, playful hard-shadow details, and gentle animated swells that bring motion to the page without getting in the way of the work.
 
-My experience section offers a detailed overview of my professional journey, highlighting key roles, responsibilities, and achievements. It provides a comprehensive understanding of the skills I've acquired and the valuable contributions I've made in various domains.
+## Highlights
 
-To delve deeper into my professional background, feel free to explore my detailed resume, which encapsulates my educational qualifications, certifications, and professional affiliations. It provides a comprehensive snapshot of my skills, knowledge, and accomplishments.
-
-Additionally, my site includes an engaging "About Me" section that offers a personal glimpse into my passions, values, and aspirations. You'll gain insight into what drives me and how my unique perspective shapes my work.
-
-For those interested in collaborating, discussing potential opportunities, or simply reaching out, my contact information is readily available. Don't hesitate to drop me a line, and I'll be thrilled to connect with you.
-
-Lastly, I invite you to explore the blog section, where I share my thoughts, insights, and articles on a wide range of topics. It's a great way to dive deeper into my expertise and get a feel for my writing style.
-
-Visit my site to get to know me better and explore the depth of my work. I look forward to connecting with you and sharing my passion for creativity, innovation, and continuous learning.
+- Responsive, multi-page portfolio covering **About**, **Resume**, **Projects**, and **Contact**
+- High-energy home page with animated swells, illustrated stickers, and project storytelling
+- Desktop and mobile navigation with clear active states
+- Dark-mode toggle with the preference saved locally
+- Motion that respects <code>prefers-reduced-motion</code>
+- Accessible interaction details including visible focus states, labelled navigation, and decorative motion kept out of the reading flow
+- No build tool or package installation required
 
 ## Screenshots
 
-![App Screenshot](https://github.com/SprihaAnand/MyPortfolio/assets/97617046/df34353d-37a4-4591-a98a-12f83af2ddab)
-![App Screenshot](https://github.com/SprihaAnand/MyPortfolio/assets/97617046/da2538cc-b917-42e1-a088-32e33dcddddf)
+### Home / Desktop
 
-![App Screenshot](https://github.com/SprihaAnand/MyPortfolio/assets/97617046/fc21d7fc-6ba7-4192-a4bf-177bf39f7872)
+![Desktop view of the homepage](assets/screenshots/portfolio-home-desktop.png)
 
+### Projects / Desktop
 
-![App Screenshot](https://github.com/SprihaAnand/MyPortfolio/assets/97617046/b07b9ead-4ddb-494f-90fe-efd4f6734673)
+![Desktop view of the Projects page](assets/screenshots/portfolio-projects-desktop.png)
 
+### Home / Mobile
 
-![App Screenshot](https://github.com/SprihaAnand/MyPortfolio/assets/97617046/4f15eb35-a0d0-4e24-bbec-551b4a65f3e3)
+<img src="assets/screenshots/portfolio-home-mobile.png" alt="Mobile view of the homepage" width="390">
 
+## Featured work
 
+| Project | Focus | Stack |
+| --- | --- | --- |
+| **DayCraftAI** | AI productivity assistant for personalized schedules, priorities, and focus patterns | Python, Streamlit, MCP, Gemini API, GitHub |
+| **LearnWithAI** | Adaptive learning platform that tailors questions and study material to the learner | Python, MERN, TensorFlow, Figma |
+| **Rebooked** | Platform for buying, selling, and donating used books to local NGOs | MERN, Kotlin, Firebase, Google API, ML |
+| **Pulse** | Responsive frontend experience built with contemporary UI patterns | HTML, CSS, Tailwind CSS, JavaScript |
 
-## Demo
+## Run locally
 
-[![Watch the video](https://github.com/SprihaAnand/MyPortfolio/assets/97617046/4f86aa8d-0612-4780-ab70-a55d4fb9e0f2)](https://github.com/SprihaAnand/MyPortfolio/assets/97617046/0b1a2bbe-77e6-4ce5-8542-dcd21aef1c64)
+This is a static site. From the project root, start any simple local server:
 
+~~~powershell
+py -m http.server 4173
+~~~
 
-# Logo
-![Logo](https://github.com/SprihaAnand/MyPortfolio/assets/97617046/72c9718f-8a14-4e39-bd64-9d8b2bbbbaec)
+Then visit [http://localhost:4173](http://localhost:4173).
 
+To stop the server, return to the terminal and press <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
-## Feedback
+## Project structure
 
-If you have any feedback, please reach out to me at sprihaanand@gmail.com
+~~~text
+.
+├── index.html                 # Home page
+├── about.html                 # Profile and background
+├── resume.html                # Experience, skills, and résumé PDF
+├── services.html              # Selected projects
+├── contact.html               # Contact details
+└── assets/
+    ├── css/style.css           # Shared visual system and responsive styles
+    ├── js/main.js              # Theme, navigation, scroll, and motion behavior
+    ├── img/                    # Portrait and supporting visual assets
+    └── screenshots/            # README previews of the current site
+~~~
 
-# ThankYou!!
-Thank you for visiting my portfolio site! I appreciate your interest and hope you take the time to explore it further. I look forward to connecting with you and discussing potential opportunities.
+## Technology
+
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- Bootstrap and Bootstrap Icons
+- AOS for entrance transitions
+
+## Contact
+
+- Email: [sprihaanand@gmail.com](mailto:sprihaanand@gmail.com)
+- GitHub: [SprihaAnand](https://github.com/SprihaAnand)
+- LinkedIn: [Spriha Anand](https://www.linkedin.com/in/spriha-anand-818672227/)

@@ -2200,8 +2200,8 @@ body:not(.home-page) #footer .copyright {
 
   .hero-grid {
     display: block;
-    min-height: 800px;
-    padding: 111px 0 95px;
+    min-height: auto;
+    padding: 111px 0 82px;
   }
 
   .hero-copy h1 {
@@ -2215,7 +2215,14 @@ body:not(.home-page) #footer .copyright {
   }
 
   .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
     gap: 12px;
+    max-width: 340px;
+  }
+
+  .hero-actions .button {
+    width: 100%;
   }
 
   .button {
@@ -2248,22 +2255,75 @@ body:not(.home-page) #footer .copyright {
   }
 
   .hero-art {
-    position: absolute;
-    right: -113px;
-    bottom: 38px;
-    width: 360px;
-    height: 360px;
-    opacity: 0.88;
-    transform: scale(0.66);
-    transform-origin: bottom right;
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: min(100%, 350px);
+    height: 370px;
+    margin: 27px auto 0;
+    opacity: 1;
+    transform: none;
+    transform-origin: center;
   }
 
   .hero-copy {
-    z-index: 6;
+    z-index: 3;
   }
 
   .portrait-card {
-    right: 28px;
+    top: 40px;
+    right: 22px;
+    width: min(76%, 280px);
+  }
+
+  .portrait-card img {
+    height: 245px;
+  }
+
+  .orb-a {
+    top: 18px;
+    width: 290px;
+    height: 290px;
+  }
+
+  .orb-b {
+    bottom: 12px;
+    width: 180px;
+    height: 180px;
+  }
+
+  .squiggle {
+    width: 240px;
+    height: 230px;
+  }
+
+  .squiggle-a {
+    top: -5px;
+    left: -25px;
+  }
+
+  .sticker-ship {
+    right: 0;
+    bottom: 12px;
+    width: 92px;
+    height: 92px;
+    font-size: 0.75rem;
+  }
+
+  .sticker-code {
+    top: 13px;
+    left: 5px;
+    width: 82px;
+    height: 76px;
+    font-size: 0.75rem;
+  }
+
+  .orbit-label {
+    top: 18px;
+    right: 4px;
+    width: 90px;
+    height: 90px;
+    font-size: 0.52rem;
   }
 
   .hero-swell {
@@ -2495,8 +2555,9 @@ body:not(.home-page) #footer .copyright {
   }
 
   .hero-art {
-    right: -145px;
-    opacity: 0.72;
+    width: min(100%, 330px);
+    margin-top: 21px;
+    opacity: 1;
   }
 
   .hero-actions .button {

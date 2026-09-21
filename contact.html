@@ -8,6 +8,19 @@
   <title>Spriha Anand</title>
   <meta content="Contact page for Spriha Anand." name="description">
   <meta content="contact, Spriha Anand, email, LinkedIn, GitHub" name="keywords">
+  <script>
+    (() => {
+      try {
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (error) {
+        // Theme preference is optional.
+      }
+    })();
+  </script>
 
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -62,7 +75,7 @@
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
                 <h4>Location:</h4>
-                <p>Solan, Himachal Pradesh, India | Open to software engineering roles</p>
+                <p>Bangalore, Karnataka, India | Open to software engineering roles</p>
               </div>
 
               <div class="email">

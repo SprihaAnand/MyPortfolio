@@ -7,6 +7,19 @@
     <title>Spriha Anand — Software Engineer</title>
     <meta content="Portfolio of Spriha Anand, Associate Software Developer at Oracle and full-stack developer." name="description">
     <meta content="Spriha Anand, Oracle, portfolio, MERN, Generative AI" name="keywords">
+    <script>
+        (() => {
+            try {
+                const savedTheme = localStorage.getItem('theme');
+                const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                }
+            } catch (error) {
+                // Theme preference is optional.
+            }
+        })();
+    </script>
 
     <link href="assets/img/favicon.png" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -158,11 +171,6 @@
                         <div class="feature-visual visual-quiz"><span>LEVEL UP</span><b>?</b><i>✓</i><i>→</i></div>
                         <span class="project-eyebrow">ADAPTIVE LEARNING / 02</span><h3>LearnWithAI</h3>
                         <p>A learning platform that adapts questions and study material to meet learners where they are.</p><span class="feature-arrow"><i class="bi bi-arrow-up-right"></i></span>
-                    </a>
-                    <a class="feature-card feature-card--pulse" href="services.html" data-aos="fade-up" data-aos-delay="200">
-                        <div class="feature-visual visual-pulse"><span></span><span></span><span></span><span></span><b>PULSE</b></div>
-                        <span class="project-eyebrow">FRONTEND / 03</span><h3>Pulse</h3>
-                        <p>A polished frontend study in contemporary structure, rhythm, and responsive interaction.</p><span class="feature-arrow"><i class="bi bi-arrow-up-right"></i></span>
                     </a>
                 </div>
             </div>

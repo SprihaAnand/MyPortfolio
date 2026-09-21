@@ -23,18 +23,27 @@
     const isDark = theme === 'dark';
     if (isDark) {
       rootBody.setAttribute('data-theme', 'dark');
+      rootHtml.setAttribute('data-theme', 'dark');
       rootHtml.classList.add('theme-dark');
     } else {
       rootBody.removeAttribute('data-theme');
+      rootHtml.removeAttribute('data-theme');
       rootHtml.classList.remove('theme-dark');
     }
 
     document.querySelectorAll('.theme-toggle').forEach((toggle) => {
       toggle.setAttribute('aria-pressed', String(isDark));
+      toggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+      toggle.setAttribute('title', isDark ? 'Switch to light mode' : 'Switch to dark mode');
     });
   };
 
-  applyTheme(savedTheme === 'dark' ? 'dark' : 'light');
+  const systemPrefersDark = window.matchMedia &&
+    window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const initialTheme = savedTheme === 'dark' || savedTheme === 'light'
+    ? savedTheme
+    : (systemPrefersDark ? 'dark' : 'light');
+  applyTheme(initialTheme);
 
   /**
    * Easy selector helper function

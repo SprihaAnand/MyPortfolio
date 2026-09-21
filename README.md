@@ -2,14 +2,14 @@
 
 A bold, playful personal portfolio for **Spriha Anand**, an Associate Software Developer at Oracle and a full-stack engineer interested in thoughtful product experiences and practical AI.
 
-The current visual system is an original “electric playground”: poster-scale typography, cobalt blue, lime, coral, playful hard-shadow details, and gentle animated swells that bring motion to the page without getting in the way of the work.
+The current visual system is an original “electric playground”: poster-scale typography, cobalt blue, lime, coral, playful hard-shadow details, and gentle animated swells that bring motion to the page without getting in the way of the work. Its Night Arcade dark theme pairs deep navy surfaces with accessible electric accents.
 
 ## Highlights
 
 - Responsive, multi-page portfolio covering **About**, **Resume**, **Projects**, and **Contact**
 - High-energy home page with animated swells, illustrated stickers, and project storytelling
 - Desktop and mobile navigation with clear active states
-- Dark-mode toggle with the preference saved locally
+- Polished Night Arcade dark mode that follows the device preference until a visitor chooses a theme, then remembers that choice locally
 - Motion that respects <code>prefers-reduced-motion</code>
 - Accessible interaction details including visible focus states, labelled navigation, and decorative motion kept out of the reading flow
 - No build tool or package installation required
@@ -19,6 +19,10 @@ The current visual system is an original “electric playground”: poster-scale
 ### Home / Desktop
 
 ![Desktop view of the homepage](assets/screenshots/portfolio-home-desktop.png)
+
+### Home / Dark mode
+
+![Dark desktop view of the homepage](assets/screenshots/portfolio-home-dark-desktop.png)
 
 ### Projects / Desktop
 
@@ -35,7 +39,6 @@ The current visual system is an original “electric playground”: poster-scale
 | **DayCraftAI** | AI productivity assistant for personalized schedules, priorities, and focus patterns | Python, Streamlit, MCP, Gemini API, GitHub |
 | **LearnWithAI** | Adaptive learning platform that tailors questions and study material to the learner | Python, MERN, TensorFlow, Figma |
 | **Rebooked** | Platform for buying, selling, and donating used books to local NGOs | MERN, Kotlin, Firebase, Google API, ML |
-| **Pulse** | Responsive frontend experience built with contemporary UI patterns | HTML, CSS, Tailwind CSS, JavaScript |
 
 ## Run locally
 

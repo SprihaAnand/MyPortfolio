@@ -8,6 +8,19 @@
     <title>Spriha Anand</title>
     <meta content="Project portfolio for Spriha Anand featuring AI, MERN, and frontend work." name="description">
     <meta content="projects, Spriha Anand, AI, MERN, frontend" name="keywords">
+    <script>
+        (() => {
+            try {
+                const savedTheme = localStorage.getItem('theme');
+                const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                }
+            } catch (error) {
+                // Theme preference is optional.
+            }
+        })();
+    </script>
 
     <link href="assets/img/favicon.png" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -99,19 +112,6 @@
                         </ul>
                     </div>
 
-                    <div class="project-card panel-soft" data-aos="zoom-in" data-aos-delay="450">
-                        <div class="card-top">
-                            <h4><a href="https://sprihaanand.github.io/frontEnd-Tailwind-02/">Pulse</a></h4>
-                            <span class="project-tag tag-vermilion">UI</span>
-                        </div>
-                        <span class="project-stack">HTML | CSS | Tailwind | JavaScript</span>
-                        <p>Built a polished frontend experience with contemporary design patterns, reusable components, and seamless navigation.</p>
-                        <ul class="project-points">
-                            <li>Focused on interface quality, layout consistency, and responsive behavior.</li>
-                            <li>Good representation of frontend attention to detail and visual execution.</li>
-                            <li>Useful proof of design-aware engineering and clean UI implementation.</li>
-                        </ul>
-                    </div>
                 </div>
             </div>
         </section>

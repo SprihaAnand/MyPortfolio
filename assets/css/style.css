@@ -1858,196 +1858,216 @@ body[data-theme="dark"] .project-stack {
   color: var(--blue);
 }
 
-.project-live-link {
+.app-preview {
   position: relative;
   z-index: 1;
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  margin-top: 13px;
-  padding-bottom: 3px;
-  color: var(--ink);
-  border-bottom: 2px solid var(--ink);
-  font-family: Arial Black, Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 0.7rem;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  transition: color 0.18s ease, transform 0.18s ease;
-}
-
-.project-playground {
-  position: relative;
-  z-index: 1;
-  display: grid;
+  display: block;
   min-width: 0;
-  gap: 11px;
   margin: 20px 0;
-  padding: 15px;
+  overflow: hidden;
   color: var(--ink);
   background: var(--surface);
   border: 1.5px solid var(--ink);
   box-shadow: 4px 4px 0 var(--shadow-color);
-}
-
-.project-playground--daycraft {
-  border-top: 5px solid var(--coral);
-}
-
-.project-playground--rebooked {
-  border-top: 5px solid var(--lime);
-}
-
-.playground-heading {
-  display: grid;
-  gap: 3px;
-}
-
-.playground-kicker {
-  color: var(--blue);
-  font-family: Arial Black, Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 0.58rem;
-  letter-spacing: 0.075em;
-  text-transform: uppercase;
-}
-
-.playground-heading h5 {
-  margin: 0;
-  font-family: Arial Black, Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 1.18rem;
-  line-height: 1.08;
-}
-
-.project-card .playground-caption {
-  margin: -2px 0 0;
-  color: var(--ink-soft);
-  font-size: 0.76rem;
-  line-height: 1.45;
-}
-
-.playground-choices {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-}
-
-.playground-chip,
-.stepper-controls button {
-  min-height: 44px;
-  padding: 8px 10px;
-  color: var(--ink);
-  appearance: none;
-  -webkit-appearance: none;
-  background: var(--paper-alt);
-  border: 1.5px solid var(--ink);
-  border-radius: 0;
-  cursor: pointer;
-  font-family: Arial Black, Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 0.66rem;
-  line-height: 1;
-  transition: background-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
-}
-
-.playground-chip.is-selected {
-  color: var(--accent-ink);
-  background: var(--lime);
-  box-shadow: 2px 2px 0 var(--shadow-color);
-  transform: translate(-1px, -1px);
-}
-
-.project-playground--rebooked .playground-chip.is-selected,
-.project-playground--rebooked .playground-action {
-  background: var(--coral);
-}
-
-.book-stepper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 9px 10px;
-  background: var(--paper-alt);
-  border: 1px solid var(--line);
-}
-
-.stepper-label {
-  color: var(--ink-soft);
-  font-size: 0.76rem;
-  font-weight: 700;
-}
-
-.stepper-controls {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.stepper-controls button {
-  width: 44px;
-  padding: 0;
-  font-size: 1rem;
-}
-
-.stepper-controls button:disabled {
-  cursor: not-allowed;
-  opacity: 0.45;
-}
-
-.stepper-controls output {
-  display: inline-grid;
-  width: 32px;
-  min-height: 44px;
-  place-items: center;
-  color: var(--ink);
-  font-family: Arial Black, Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 0.85rem;
-}
-
-.playground-action {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 7px;
-  min-height: 44px;
-  padding: 9px 12px;
-  color: var(--accent-ink);
-  background: var(--lime);
-  border: 1.5px solid var(--ink);
-  box-shadow: 3px 3px 0 var(--shadow-color);
-  cursor: pointer;
-  font-family: Arial Black, Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 0.69rem;
-  letter-spacing: 0.025em;
-  text-transform: uppercase;
+  text-decoration: none;
   transition: box-shadow 0.18s ease, transform 0.18s ease;
 }
 
-.playground-result {
+.app-preview-chrome {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 9px;
+  min-height: 30px;
+  padding: 7px 9px;
+  color: var(--ink-inverse);
+  background: var(--accent-ink);
+}
+
+.app-preview-dots {
+  display: inline-flex;
+  gap: 4px;
+}
+
+.app-preview-dots i {
   display: block;
-  min-width: 0;
-  min-height: 46px;
-  padding: 10px;
-  overflow-wrap: anywhere;
+  width: 6px;
+  height: 6px;
+  background: var(--coral);
+  border-radius: 50%;
+}
+
+.app-preview-dots i:nth-child(2) { background: var(--yellow); }
+.app-preview-dots i:nth-child(3) { background: var(--lime); }
+
+.app-preview-url {
+  overflow: hidden;
+  color: var(--inverse-soft);
+  font-family: Arial Black, Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 0.56rem;
+  letter-spacing: 0.065em;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.app-preview-chrome > .bi {
+  color: var(--yellow);
+  font-size: 0.78rem;
+}
+
+.app-preview-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 132px;
+  align-items: end;
+  gap: 14px;
+  min-height: 182px;
+  padding: 16px;
+}
+
+.app-preview-body--daycraft {
+  color: var(--ink-inverse);
+  background: var(--blue-deep);
+}
+
+.app-preview-body--rebooked {
+  background: var(--surface-raised);
+}
+
+.preview-kicker {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--blue);
+  font-family: Arial Black, Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 0.55rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.app-preview-body--daycraft .preview-kicker {
+  color: var(--lime);
+}
+
+.app-preview-body strong {
+  display: block;
+  font-family: Arial Black, Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: clamp(1.25rem, 2.5vw, 1.7rem);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+}
+
+.preview-note {
+  display: block;
+  margin-top: 10px;
   color: var(--ink-soft);
-  background: var(--paper-alt);
-  border-left: 4px solid var(--blue);
-  font-size: 0.77rem;
-  line-height: 1.42;
+  font-size: 0.66rem;
+  font-weight: 700;
+}
+
+.app-preview-body--daycraft .preview-note {
+  color: var(--inverse-soft);
+}
+
+.preview-schedule {
+  display: grid;
+  gap: 6px;
+  padding: 9px;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1.5px solid var(--ink);
+  box-shadow: 3px 3px 0 var(--shadow-color);
+}
+
+.preview-schedule > span {
+  display: grid;
+  grid-template-columns: 31px 6px minmax(0, 1fr);
+  align-items: center;
+  gap: 6px;
+}
+
+.preview-schedule b,
+.preview-schedule em {
+  font-size: 0.56rem;
+  font-style: normal;
+  line-height: 1.15;
+}
+
+.preview-schedule b {
+  color: var(--ink-soft);
+  font-family: Arial Black, Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.preview-schedule i {
+  display: block;
+  width: 6px;
+  height: 6px;
+  background: var(--coral);
+  border-radius: 50%;
+}
+
+.preview-schedule > span:nth-child(2) i { background: var(--yellow); }
+.preview-schedule > span:nth-child(3) i { background: var(--lime); }
+
+.preview-book-stack {
+  display: grid;
+  gap: 6px;
+}
+
+.preview-book-stack > span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px;
+  color: var(--accent-ink);
+  border: 1.5px solid var(--ink);
+  box-shadow: 3px 3px 0 var(--shadow-color);
+  transform: rotate(-2deg);
+}
+
+.preview-book-stack > span:nth-child(1) { background: var(--coral); }
+.preview-book-stack > span:nth-child(2) {
+  background: var(--yellow);
+  transform: rotate(1deg) translateX(-4px);
+}
+.preview-book-stack > span:nth-child(3) {
+  background: var(--lime);
+  transform: rotate(-1deg) translateX(3px);
+}
+
+.preview-book-stack b,
+.preview-book-stack em {
+  font-size: 0.56rem;
+  font-style: normal;
+  line-height: 1.1;
+}
+
+.preview-book-stack b {
+  font-family: Arial Black, Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.app-preview-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 44px;
+  padding: 8px 12px;
+  color: var(--accent-ink);
+  background: var(--lime);
+  border-top: 1.5px solid var(--ink);
+  font-family: Arial Black, Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 0.64rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.app-preview--rebooked .app-preview-cta {
+  background: var(--coral);
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .project-live-link:hover {
-    color: var(--blue);
-    transform: translateX(4px);
-  }
-
-  .playground-chip:hover,
-  .stepper-controls button:hover:not(:disabled) {
-    transform: translate(-1px, -1px);
+  .app-preview:hover {
     box-shadow: 2px 2px 0 var(--shadow-color);
-  }
-
-  .playground-action:hover {
-    box-shadow: 1px 1px 0 var(--shadow-color);
     transform: translate(2px, 2px);
   }
 }
@@ -2701,23 +2721,15 @@ body:not(.home-page) #footer .copyright {
     font-size: 2.5rem;
   }
 
-  .project-playground {
-    gap: 10px;
+  .app-preview {
     margin: 18px 0;
-    padding: 13px;
   }
 
-  .book-stepper {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .stepper-controls {
-    align-self: flex-end;
-  }
-
-  .playground-action {
-    width: 100%;
+  .app-preview-body {
+    grid-template-columns: minmax(0, 1fr) 112px;
+    gap: 11px;
+    min-height: 168px;
+    padding: 14px;
   }
 
   .contact-note {

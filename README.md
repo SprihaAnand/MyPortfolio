@@ -12,7 +12,7 @@ The current visual system is an original “electric playground”: poster-scale
 - Polished Night Arcade dark mode that follows the device preference until a visitor chooses a theme, then remembers that choice locally
 - Motion that respects <code>prefers-reduced-motion</code>
 - Accessible interaction details including visible focus states, labelled navigation, and decorative motion kept out of the reading flow
-- Two small, local-only project playgrounds that give visitors a quick feel for DayCraftAI and Rebooked before they open the full apps
+- Compact app-window previews for DayCraftAI and Rebooked, each linking straight to the full live project
 - No build tool or package installation required
 
 ## Screenshots

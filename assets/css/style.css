@@ -1481,13 +1481,13 @@ body:not(.home-page) section {
   margin-bottom: 30px;
 }
 
-.field-notes-heading h2 {
+.field-notes-heading :is(h1, h2) {
   max-width: 10ch;
   margin: 8px 0 0;
   font-size: clamp(3rem, 6.8vw, 6.3rem);
 }
 
-.field-notes-heading h2 span {
+.field-notes-heading :is(h1, h2) span {
   display: inline-block;
   color: var(--coral);
   transform: rotate(-3deg);
@@ -1670,7 +1670,7 @@ body:not(.home-page) section {
   opacity: 0.68;
 }
 
-.field-note-card h3 {
+.field-note-card :is(h2, h3) {
   max-width: 11ch;
   margin: clamp(38px, 5vw, 61px) 0 17px;
   color: var(--note-ink);
@@ -1678,7 +1678,7 @@ body:not(.home-page) section {
   line-height: 0.92;
 }
 
-.field-note-card h3 em {
+.field-note-card :is(h2, h3) em {
   display: inline-block;
   color: var(--note-ink);
   font-style: normal;
@@ -1869,6 +1869,17 @@ body:not(.home-page) section {
 }
 
 /* Inner pages */
+
+body.field-notes-page.inner-page #main {
+  min-height: 0;
+  padding: 0;
+}
+
+body.field-notes-page.inner-page section.field-notes {
+  min-height: calc(100vh - 90px);
+  padding: clamp(130px, 14vw, 176px) 0 clamp(100px, 13vw, 170px);
+  border-top: 0;
+}
 
 body:not(.home-page) .panel {
   background: var(--paper);
@@ -2947,6 +2958,10 @@ body:not(.home-page) #footer .copyright {
     background-size: 27px 27px;
   }
 
+  body.field-notes-page.inner-page section.field-notes {
+    padding: 104px 0;
+  }
+
   .field-notes::before {
     top: 21px;
     right: 20px;
@@ -2963,7 +2978,7 @@ body:not(.home-page) #footer .copyright {
     margin-bottom: 25px;
   }
 
-  .field-notes-heading h2 {
+  .field-notes-heading :is(h1, h2) {
     font-size: clamp(3rem, 14vw, 4.7rem);
   }
 
@@ -2994,7 +3009,7 @@ body:not(.home-page) #footer .copyright {
     transform: none;
   }
 
-  .field-note-card h3 {
+  .field-note-card :is(h2, h3) {
     margin-top: 43px;
     font-size: clamp(2.3rem, 12vw, 3.65rem);
   }

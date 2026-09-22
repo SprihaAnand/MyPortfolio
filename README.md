@@ -13,7 +13,7 @@ The current visual system is an original “electric playground”: poster-scale
 - Motion that respects <code>prefers-reduced-motion</code>
 - Accessible interaction details including visible focus states, labelled navigation, and decorative motion kept out of the reading flow
 - Compact app-window previews for DayCraftAI and Rebooked, each linking straight to the full live project
-- A zine-style **Field Notes** wall for selected LinkedIn writing, with local summaries and direct post links instead of fragile embeds
+- A dedicated zine-style **Field Notes** page for selected LinkedIn writing, with local summaries and direct post links instead of fragile embeds
 - Mobile Field Notes cards stack cleanly without rotated layouts or horizontal scrolling
 - No build tool or package installation required
 
@@ -26,6 +26,10 @@ The current visual system is an original “electric playground”: poster-scale
 ### Home / Dark mode
 
 ![Dark desktop view of the homepage](assets/screenshots/portfolio-home-dark-desktop.png)
+
+### Field Notes / Desktop
+
+![Desktop view of the Field Notes page](assets/screenshots/portfolio-field-notes-desktop.png)
 
 ### Projects / Desktop
 
@@ -63,6 +67,7 @@ To stop the server, return to the terminal and press <kbd>Ctrl</kbd>+<kbd>C</kbd
 ├── about.html                 # Profile and background
 ├── resume.html                # Experience, skills, and résumé PDF
 ├── services.html              # Selected projects
+├── field-notes.html           # Public writing and learning notes
 ├── contact.html               # Contact details
 └── assets/
     ├── css/style.css           # Shared visual system and responsive styles

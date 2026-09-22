@@ -66,6 +66,7 @@ body[data-theme="dark"] {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -1415,6 +1416,326 @@ body:not(.home-page) section {
   transform: rotate(45deg);
 }
 
+/* Field notes — locally styled post cards rather than fragile LinkedIn embeds. */
+.field-notes {
+  position: relative;
+  padding: clamp(100px, 13vw, 170px) 0 clamp(110px, 14vw, 185px);
+  background-color: var(--paper-alt);
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 34px 34px;
+  border-block: 2px solid var(--ink);
+}
+
+.field-notes::before,
+.field-notes::after {
+  position: absolute;
+  z-index: 0;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+
+.field-notes::before {
+  top: clamp(26px, 4vw, 54px);
+  right: clamp(20px, 7vw, 112px);
+  width: clamp(52px, 6vw, 78px);
+  height: clamp(52px, 6vw, 78px);
+  content: "✦";
+  color: var(--accent-ink);
+  background: var(--lime);
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+  box-shadow: var(--shadow-small);
+  font-size: clamp(1.3rem, 2vw, 2rem);
+  transform: rotate(13deg);
+}
+
+.field-notes::after {
+  bottom: clamp(24px, 5vw, 62px);
+  left: clamp(15px, 4vw, 66px);
+  width: clamp(40px, 5vw, 58px);
+  height: clamp(40px, 5vw, 58px);
+  content: "+";
+  color: var(--accent-ink);
+  background: var(--coral);
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+  box-shadow: var(--shadow-small);
+  font-family: Arial Black, Impact, sans-serif;
+  font-size: clamp(1.4rem, 2.4vw, 2.2rem);
+  transform: rotate(-12deg);
+}
+
+.field-notes .container {
+  position: relative;
+  z-index: 1;
+}
+
+.field-notes-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(225px, 0.42fr);
+  align-items: end;
+  gap: clamp(30px, 6vw, 92px);
+  margin-bottom: 30px;
+}
+
+.field-notes-heading h2 {
+  max-width: 10ch;
+  margin: 8px 0 0;
+  font-size: clamp(3rem, 6.8vw, 6.3rem);
+}
+
+.field-notes-heading h2 span {
+  display: inline-block;
+  color: var(--coral);
+  transform: rotate(-3deg);
+}
+
+.field-notes-profile {
+  justify-self: end;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  width: min(100%, 280px);
+  padding: 17px 18px 16px;
+  color: var(--accent-ink);
+  background: var(--lime);
+  border: 2px solid var(--accent-ink);
+  box-shadow: 5px 5px 0 var(--shadow-color);
+  font-size: 0.65rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transform: rotate(2deg);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.field-notes-profile strong {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-family: Arial Black, Impact, sans-serif;
+  font-size: 1rem;
+  letter-spacing: -0.03em;
+  text-transform: none;
+}
+
+.field-notes-profile i,
+.field-note-link i {
+  font-family: bootstrap-icons !important;
+  font-style: normal;
+}
+
+.field-notes-profile:hover {
+  color: var(--accent-ink);
+  transform: translate(3px, 3px) rotate(0deg);
+  box-shadow: 2px 2px 0 var(--shadow-color);
+}
+
+.field-notes-intro {
+  max-width: 58ch;
+  margin-bottom: clamp(36px, 5vw, 65px);
+  color: var(--ink-soft);
+  font-size: clamp(1rem, 1.55vw, 1.17rem);
+  line-height: 1.65;
+}
+
+.field-notes-wall {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: clamp(18px, 2vw, 28px);
+}
+
+.field-note-reveal {
+  min-width: 0;
+}
+
+.field-note-reveal:nth-child(2) {
+  margin-top: 34px;
+}
+
+.field-note-reveal:nth-child(3) {
+  margin-top: -14px;
+}
+
+.field-note-card {
+  --note-bg: var(--surface);
+  --note-ink: var(--ink);
+  --note-soft: var(--ink-soft);
+  --note-border: var(--ink);
+  --note-tape: var(--yellow);
+  --note-mark: var(--blue);
+  --note-mark-ink: var(--ink-inverse);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 328px;
+  padding: clamp(26px, 3.2vw, 39px);
+  color: var(--note-ink);
+  background: var(--note-bg);
+  border: 2px solid var(--note-border);
+  box-shadow: 7px 7px 0 var(--shadow-color);
+  transform: rotate(var(--note-tilt, -1deg));
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.field-note-card::before {
+  position: absolute;
+  top: -12px;
+  left: clamp(24px, 11%, 76px);
+  width: clamp(88px, 20%, 124px);
+  height: 23px;
+  content: "";
+  background: var(--note-tape);
+  border: 1.5px solid var(--note-border);
+  opacity: 0.94;
+  transform: rotate(-3deg);
+}
+
+.field-note-card--systems {
+  --note-tilt: -1.35deg;
+  --note-tape: var(--yellow);
+  --note-mark: var(--blue);
+  --note-mark-ink: var(--ink-inverse);
+}
+
+.field-note-card--leadership {
+  --note-bg: var(--coral);
+  --note-ink: var(--accent-ink);
+  --note-soft: var(--accent-ink);
+  --note-border: var(--accent-ink);
+  --note-tape: var(--pink);
+  --note-mark: var(--lime);
+  --note-mark-ink: var(--accent-ink);
+  --note-tilt: 1.65deg;
+}
+
+.field-note-card--oracle {
+  --note-bg: var(--yellow);
+  --note-ink: var(--accent-ink);
+  --note-soft: var(--accent-ink);
+  --note-border: var(--accent-ink);
+  --note-tape: var(--surface);
+  --note-mark: var(--blue);
+  --note-mark-ink: var(--ink-inverse);
+  --note-tilt: 0.85deg;
+}
+
+.field-note-card--milestone {
+  --note-bg: var(--lime);
+  --note-ink: var(--accent-ink);
+  --note-soft: var(--accent-ink);
+  --note-border: var(--accent-ink);
+  --note-tape: var(--yellow);
+  --note-mark: var(--coral);
+  --note-mark-ink: var(--accent-ink);
+  --note-tilt: -1.9deg;
+}
+
+.field-note-mark {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  color: var(--note-mark-ink);
+  background: var(--note-mark);
+  border: 1.5px solid var(--note-border);
+  border-radius: 50%;
+  box-shadow: 3px 3px 0 var(--note-border);
+  font-size: 1.14rem;
+  transform: rotate(-8deg);
+}
+
+.field-note-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px 14px;
+  padding-right: 54px;
+  color: var(--note-ink);
+  font-family: Arial Black, Impact, sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.065em;
+  line-height: 1.25;
+}
+
+.field-note-meta span + span {
+  opacity: 0.68;
+}
+
+.field-note-card h3 {
+  max-width: 11ch;
+  margin: clamp(38px, 5vw, 61px) 0 17px;
+  color: var(--note-ink);
+  font-size: clamp(2.15rem, 4.2vw, 4.1rem);
+  line-height: 0.92;
+}
+
+.field-note-card h3 em {
+  display: inline-block;
+  color: var(--note-ink);
+  font-style: normal;
+  text-decoration: underline;
+  text-decoration-color: var(--note-tape);
+  text-decoration-thickness: 0.16em;
+  text-underline-offset: 0.07em;
+  transform: rotate(-2deg);
+}
+
+.field-note-card p {
+  max-width: 37ch;
+  margin-bottom: 22px;
+  color: var(--note-soft);
+  font-size: 0.92rem;
+  line-height: 1.58;
+}
+
+.field-note-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.field-note-tags span {
+  padding: 5px 7px;
+  color: var(--note-ink);
+  border: 1.5px solid currentColor;
+  font-size: 0.68rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.field-note-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 28px;
+  color: var(--note-ink);
+  font-family: Arial Black, Impact, sans-serif;
+  font-size: 0.82rem;
+  letter-spacing: -0.02em;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .field-note-card:hover {
+    color: var(--note-ink);
+    transform: translateY(-8px) rotate(0deg);
+    box-shadow: 12px 14px 0 var(--shadow-color);
+  }
+
+  .field-note-card:hover .field-note-mark {
+    transform: rotate(12deg) scale(1.08);
+  }
+}
+
 .home-stack {
   padding: clamp(130px, 17vw, 210px) 0 clamp(105px, 13vw, 165px);
 }
@@ -2364,6 +2685,10 @@ body:not(.home-page) #footer .copyright {
     min-height: 445px;
   }
 
+  .field-notes-heading {
+    gap: 28px;
+  }
+
   .stack-layout {
     grid-template-columns: minmax(0, 0.9fr) minmax(330px, 1.1fr);
     gap: 32px;
@@ -2615,6 +2940,71 @@ body:not(.home-page) #footer .copyright {
 
   .project-swell {
     height: 61px;
+  }
+
+  .field-notes {
+    padding: 92px 0 104px;
+    background-size: 27px 27px;
+  }
+
+  .field-notes::before {
+    top: 21px;
+    right: 20px;
+  }
+
+  .field-notes::after {
+    right: 16px;
+    bottom: 20px;
+    left: auto;
+  }
+
+  .field-notes-heading {
+    display: block;
+    margin-bottom: 25px;
+  }
+
+  .field-notes-heading h2 {
+    font-size: clamp(3rem, 14vw, 4.7rem);
+  }
+
+  .field-notes-profile {
+    justify-self: auto;
+    width: min(100%, 290px);
+    margin-top: 28px;
+  }
+
+  .field-notes-intro {
+    margin-bottom: 41px;
+    font-size: 0.98rem;
+  }
+
+  .field-notes-wall {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 23px;
+  }
+
+  .field-note-reveal:nth-child(2),
+  .field-note-reveal:nth-child(3) {
+    margin-top: 0;
+  }
+
+  .field-note-card {
+    min-height: 0;
+    padding: 29px 22px 27px;
+    transform: none;
+  }
+
+  .field-note-card h3 {
+    margin-top: 43px;
+    font-size: clamp(2.3rem, 12vw, 3.65rem);
+  }
+
+  .field-note-card p {
+    font-size: 0.9rem;
+  }
+
+  .field-note-link {
+    padding-top: 25px;
   }
 
   .stack-layout {

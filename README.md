@@ -13,6 +13,8 @@ The current visual system is an original “electric playground”: poster-scale
 - Motion that respects <code>prefers-reduced-motion</code>
 - Accessible interaction details including visible focus states, labelled navigation, and decorative motion kept out of the reading flow
 - Compact app-window previews for DayCraftAI and Rebooked, each linking straight to the full live project
+- A zine-style **Field Notes** wall for selected LinkedIn writing, with local summaries and direct post links instead of fragile embeds
+- Mobile Field Notes cards stack cleanly without rotated layouts or horizontal scrolling
 - No build tool or package installation required
 
 ## Screenshots

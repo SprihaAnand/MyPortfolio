@@ -1730,6 +1730,7 @@ body[data-theme="dark"] .resume-item:hover {
 .project-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
   gap: 20px;
 }
 
@@ -1747,27 +1748,36 @@ body[data-theme="dark"] .resume-item:hover {
 
 .project-card::before {
   position: absolute;
+  z-index: 0;
   right: -26px;
   bottom: -31px;
   width: 135px;
   height: 135px;
   content: "";
+  pointer-events: none;
   border: 21px solid var(--yellow);
   border-radius: 50%;
   transition: transform 0.3s ease;
+}
+
+.project-card > * {
+  position: relative;
+  z-index: 1;
 }
 
 .project-card:nth-child(2)::before { border-color: var(--coral); }
 .project-card:nth-child(3)::before { border-color: var(--lime); }
 .project-card:nth-child(4)::before { border-color: var(--blue); }
 
-.project-card:hover {
-  transform: translate(-3px, -6px) rotate(-0.4deg);
-  box-shadow: 10px 12px 0 var(--ink);
-}
+@media (hover: hover) and (pointer: fine) {
+  .project-card:hover {
+    transform: translate(-3px, -6px) rotate(-0.4deg);
+    box-shadow: 10px 12px 0 var(--ink);
+  }
 
-.project-card:hover::before {
-  transform: scale(1.15);
+  .project-card:hover::before {
+    transform: scale(1.15);
+  }
 }
 
 .project-card .card-top {
@@ -1846,6 +1856,200 @@ body[data-theme="dark"] .project-stack {
 
 .project-points li::marker {
   color: var(--blue);
+}
+
+.project-live-link {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 13px;
+  padding-bottom: 3px;
+  color: var(--ink);
+  border-bottom: 2px solid var(--ink);
+  font-family: Arial Black, Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  transition: color 0.18s ease, transform 0.18s ease;
+}
+
+.project-playground {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  min-width: 0;
+  gap: 11px;
+  margin: 20px 0;
+  padding: 15px;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1.5px solid var(--ink);
+  box-shadow: 4px 4px 0 var(--shadow-color);
+}
+
+.project-playground--daycraft {
+  border-top: 5px solid var(--coral);
+}
+
+.project-playground--rebooked {
+  border-top: 5px solid var(--lime);
+}
+
+.playground-heading {
+  display: grid;
+  gap: 3px;
+}
+
+.playground-kicker {
+  color: var(--blue);
+  font-family: Arial Black, Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 0.58rem;
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
+}
+
+.playground-heading h5 {
+  margin: 0;
+  font-family: Arial Black, Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 1.18rem;
+  line-height: 1.08;
+}
+
+.project-card .playground-caption {
+  margin: -2px 0 0;
+  color: var(--ink-soft);
+  font-size: 0.76rem;
+  line-height: 1.45;
+}
+
+.playground-choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.playground-chip,
+.stepper-controls button {
+  min-height: 44px;
+  padding: 8px 10px;
+  color: var(--ink);
+  appearance: none;
+  -webkit-appearance: none;
+  background: var(--paper-alt);
+  border: 1.5px solid var(--ink);
+  border-radius: 0;
+  cursor: pointer;
+  font-family: Arial Black, Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 0.66rem;
+  line-height: 1;
+  transition: background-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+.playground-chip.is-selected {
+  color: var(--accent-ink);
+  background: var(--lime);
+  box-shadow: 2px 2px 0 var(--shadow-color);
+  transform: translate(-1px, -1px);
+}
+
+.project-playground--rebooked .playground-chip.is-selected,
+.project-playground--rebooked .playground-action {
+  background: var(--coral);
+}
+
+.book-stepper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 9px 10px;
+  background: var(--paper-alt);
+  border: 1px solid var(--line);
+}
+
+.stepper-label {
+  color: var(--ink-soft);
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.stepper-controls {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.stepper-controls button {
+  width: 44px;
+  padding: 0;
+  font-size: 1rem;
+}
+
+.stepper-controls button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.stepper-controls output {
+  display: inline-grid;
+  width: 32px;
+  min-height: 44px;
+  place-items: center;
+  color: var(--ink);
+  font-family: Arial Black, Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 0.85rem;
+}
+
+.playground-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 44px;
+  padding: 9px 12px;
+  color: var(--accent-ink);
+  background: var(--lime);
+  border: 1.5px solid var(--ink);
+  box-shadow: 3px 3px 0 var(--shadow-color);
+  cursor: pointer;
+  font-family: Arial Black, Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 0.69rem;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  transition: box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+.playground-result {
+  display: block;
+  min-width: 0;
+  min-height: 46px;
+  padding: 10px;
+  overflow-wrap: anywhere;
+  color: var(--ink-soft);
+  background: var(--paper-alt);
+  border-left: 4px solid var(--blue);
+  font-size: 0.77rem;
+  line-height: 1.42;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .project-live-link:hover {
+    color: var(--blue);
+    transform: translateX(4px);
+  }
+
+  .playground-chip:hover,
+  .stepper-controls button:hover:not(:disabled) {
+    transform: translate(-1px, -1px);
+    box-shadow: 2px 2px 0 var(--shadow-color);
+  }
+
+  .playground-action:hover {
+    box-shadow: 1px 1px 0 var(--shadow-color);
+    transform: translate(2px, 2px);
+  }
 }
 
 .contact-layout {
@@ -2493,12 +2697,27 @@ body:not(.home-page) #footer .copyright {
     padding: 26px 21px;
   }
 
-  .project-card:hover {
-    transform: translateY(-5px);
-  }
-
   .project-card h4 {
     font-size: 2.5rem;
+  }
+
+  .project-playground {
+    gap: 10px;
+    margin: 18px 0;
+    padding: 13px;
+  }
+
+  .book-stepper {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .stepper-controls {
+    align-self: flex-end;
+  }
+
+  .playground-action {
+    width: 100%;
   }
 
   .contact-note {

@@ -82,6 +82,108 @@
   }, true)
 
   /**
+   * Small, self-contained project playgrounds
+   */
+  const selectPlaygroundChip = (choiceGroup, selectedChip) => {
+    choiceGroup.querySelectorAll('.playground-chip').forEach((chip) => {
+      const isSelected = chip === selectedChip;
+      chip.classList.toggle('is-selected', isSelected);
+      chip.setAttribute('aria-pressed', String(isSelected));
+    });
+  };
+
+  document.querySelectorAll('.playground-choices').forEach((choiceGroup) => {
+    choiceGroup.addEventListener('click', (event) => {
+      const selectedChip = event.target.closest('.playground-chip');
+      if (!selectedChip || !choiceGroup.contains(selectedChip)) return;
+      selectPlaygroundChip(choiceGroup, selectedChip);
+    });
+  });
+
+  const daycraftPlayground = document.querySelector('[data-daycraft-playground]');
+  if (daycraftPlayground) {
+    const focusBlocks = {
+      deep: '75-minute focus block: shape the roadmap, then leave a 15-minute reset before the next commitment.',
+      steady: '45-minute steady block: resolve the highest-priority task, then take a five-minute breather.',
+      light: '20-minute quick win: clear one small task and create momentum for the rest of the day.'
+    };
+    const buildBlock = daycraftPlayground.querySelector('[data-daycraft-generate]');
+    const daycraftResult = daycraftPlayground.querySelector('[data-daycraft-result]');
+
+    if (buildBlock && daycraftResult) {
+      buildBlock.addEventListener('click', () => {
+        const selectedEnergy = daycraftPlayground.querySelector('[data-daycraft-energy][aria-pressed="true"]');
+        if (!selectedEnergy) return;
+        daycraftResult.textContent = focusBlocks[selectedEnergy.dataset.daycraftEnergy] || focusBlocks.deep;
+      });
+    }
+  }
+
+  const rebookedPlayground = document.querySelector('[data-rebooked-playground]');
+  if (rebookedPlayground) {
+    const countOutput = rebookedPlayground.querySelector('[data-rebooked-count]');
+    const rebookedResult = rebookedPlayground.querySelector('[data-rebooked-result]');
+    const decreaseButton = rebookedPlayground.querySelector('[data-rebooked-adjust="-1"]');
+    const increaseButton = rebookedPlayground.querySelector('[data-rebooked-adjust="1"]');
+    const matchButton = rebookedPlayground.querySelector('[data-rebooked-match]');
+    const bookMatches = {
+      children: {
+        singular: "children's book",
+        plural: "children's books",
+        destination: 'community reading shelf'
+      },
+      textbook: {
+        singular: 'textbook',
+        plural: 'textbooks',
+        destination: 'school library'
+      },
+      fiction: {
+        singular: 'fiction book',
+        plural: 'fiction books',
+        destination: 'neighbourhood reading room'
+      }
+    };
+    let bookCount = 3;
+
+    const updateBookCount = () => {
+      if (!countOutput || !decreaseButton || !increaseButton) return;
+      countOutput.textContent = String(bookCount);
+      countOutput.setAttribute('aria-label', `${bookCount} ${bookCount === 1 ? 'book' : 'books'} selected`);
+      decreaseButton.disabled = bookCount === 1;
+      increaseButton.disabled = bookCount === 12;
+    };
+
+    const resetRebookedMessage = () => {
+      if (rebookedResult) {
+        rebookedResult.textContent = `${bookCount} ${bookCount === 1 ? 'book' : 'books'} ready for ${bookCount === 1 ? 'its' : 'their'} next reader.`;
+      }
+    };
+
+    [decreaseButton, increaseButton].forEach((button) => {
+      if (!button) return;
+      button.addEventListener('click', () => {
+        const adjustment = Number(button.dataset.rebookedAdjust);
+        bookCount = Math.max(1, Math.min(12, bookCount + adjustment));
+        updateBookCount();
+        resetRebookedMessage();
+      });
+    });
+
+    if (matchButton && rebookedResult) {
+      matchButton.addEventListener('click', () => {
+        const selectedKind = rebookedPlayground.querySelector('[data-rebooked-kind][aria-pressed="true"]');
+        const selectedMatch = selectedKind
+          ? bookMatches[selectedKind.dataset.rebookedKind]
+          : bookMatches.children;
+        const bookLabel = bookCount === 1 ? selectedMatch.singular : selectedMatch.plural;
+        rebookedResult.textContent = `${bookCount} ${bookLabel} ${bookCount === 1 ? 'is' : 'are'} ready for a ${selectedMatch.destination}.`;
+      });
+    }
+
+    updateBookCount();
+  }
+
+  /**
    * Easy on scroll event listener 
    */
   const onscroll = (el, listener) => {

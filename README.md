@@ -6,7 +6,8 @@ The current visual system is an original “electric playground”: poster-scale
 
 ## Highlights
 
-- Responsive, multi-page portfolio covering **About**, **Resume**, **Projects**, and **Contact**
+- Responsive, multi-page portfolio covering **Off the Clock**, **Resume**, **Projects**, and **Contact**
+- An interactive **Off the Clock** destination for original art and rangoli, reading, crochet, and travel chapters for Goa, Manali, Pondicherry, and treks
 - High-energy home page with animated swells, illustrated stickers, and project storytelling
 - Desktop and mobile navigation with clear active states
 - Polished Night Arcade dark mode that follows the device preference until a visitor chooses a theme, then remembers that choice locally
@@ -64,7 +65,7 @@ To stop the server, return to the terminal and press <kbd>Ctrl</kbd>+<kbd>C</kbd
 ~~~text
 .
 ├── index.html                 # Home page
-├── about.html                 # Profile and background
+├── about.html                 # Off-the-clock personal photo scrapbook
 ├── resume.html                # Experience, skills, and résumé PDF
 ├── services.html              # Selected projects
 ├── field-notes.html           # Public writing and learning notes
@@ -72,7 +73,7 @@ To stop the server, return to the terminal and press <kbd>Ctrl</kbd>+<kbd>C</kbd
 └── assets/
     ├── css/style.css           # Shared visual system and responsive styles
     ├── js/main.js              # Theme, navigation, scroll, and motion behavior
-    ├── img/                    # Portrait and supporting visual assets
+    ├── img/                    # Portrait, supporting assets, and local life galleries
     └── screenshots/            # README previews of the current site
 ~~~
 
